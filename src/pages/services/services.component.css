@@ -1,0 +1,86 @@
+.services-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-card {
+  cursor: pointer;
+  border: 1px solid #f1f1f1;
+  border-radius: 12px;
+  color: aqua;
+}
+
+.service-card:hover {
+  color: #313531; /* same green shade as icons */
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+.service-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+.grid {
+  background-color: #37474F;
+  padding: 20px;
+  border-radius: 12px;
+}
+.service-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(128, 255, 0, 0.445);
+}
+.text {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(56, 20, 56);
+}
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.heading .tag {
+  color:green !important; ;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  position: relative;
+}
+.heading .tag::before,
+.heading .tag::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background: var(--green);
+}
+.heading .tag::before { left: -50px; }
+.heading .tag::after { right: -50px; }
+.heading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-top: 8px;
+  color: var(--dark);
+}
+
+.services-page { width: min(100% - 48px, 1120px); margin: 0 auto; padding: 64px 0 74px; color: #203743; }
+.services-intro { max-width: 740px; margin: 0 auto 42px; text-align: center; }
+.services-intro h1 { margin: 0; color: #183747; font: 500 clamp(2.6rem, 5vw, 4rem)/1.08 'Playfair Display', Georgia, serif; }
+.services-intro > p:last-child { margin: 16px 0 0; color: #64757d; line-height: 1.7; }
+.services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #dce5e7; border-left: 1px solid #dce5e7; }
+.service-card { min-width: 0; padding: 26px; border: 0; border-right: 1px solid #dce5e7; border-bottom: 1px solid #dce5e7; border-radius: 0; background: #fff; color: #203743; cursor: default; }
+.service-card:hover { transform: none; background: #f6f8f7; box-shadow: none; }
+.service-icon { display: grid; width: 44px; aspect-ratio: 1; place-items: center; margin-bottom: 18px; border-radius: 50%; background: #eaf1f0; color: #174c69; font-size: 1.05rem; }
+.service-card h2 { margin: 0 0 9px; color: #183747; font-size: 1.04rem; font-weight: 700; }
+.service-card p { margin: 0; color: #64757d; font-size: .88rem; line-height: 1.65; }
+.services-contact { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 48px; padding: 26px 0; border-top: 1px solid #dce5e7; border-bottom: 1px solid #dce5e7; }
+.services-contact h2 { margin: 0; color: #183747; font: 500 1.7rem 'Playfair Display', Georgia, serif; }
+.services-contact a { display: inline-flex; align-items: center; gap: 12px; color: #bd2635; font-weight: 700; text-decoration: none; }
+@media (max-width: 760px) { .services-page { width: min(100% - 36px, 600px); padding: 44px 0 54px; } .services-intro { margin-bottom: 28px; text-align: left; } .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .service-card { padding: 20px; } }
+@media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } .services-contact { align-items: flex-start; flex-direction: column; } }

@@ -1,0 +1,176 @@
+:root{
+--accent:#0077c8;
+--muted:#6b7280;
+--bg:#f8fafc;
+--card:#ffffff;
+--sidebar:#0f1724;
+}
+
+
+.tac-shell{
+display:flex;
+min-height:100vh;
+background:var(--bg);
+color:#0b1220;
+font-family:Inter, Roboto, Arial, sans-serif;
+}
+
+
+.tac-sidebar{
+width:280px;
+background:linear-gradient(180deg,var(--sidebar),#00121a);
+color:#fff;
+padding:24px;
+box-shadow:2px 0 8px rgba(2,6,23,0.2);
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+
+.tac-sidebar .brand{
+display:flex;
+gap:12px;
+align-items:center;
+}
+
+
+.tac-sidebar img{width:48px;height:48px;object-fit:contain;border-radius:6px}
+.tac-sidebar h2{font-size:18px;margin:0}
+
+
+.nav{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.nav-link{
+color:rgba(255,255,255,0.9);
+text-decoration:none;padding:10px 12px;border-radius:8px;display:inline-block;
+transition:background .18s,transform .12s;
+}
+.nav-link:hover{background:rgba(255,255,255,0.04);transform:translateY(-1px)}
+.nav-link.active{background:rgba(255,255,255,0.06);font-weight:600}
+
+
+.sidebar-foot{margin-top:auto;color:rgba(255,255,255,0.65);font-size:12px}
+
+
+.tac-main{
+flex:1;padding:32px 40px;display:flex;flex-direction:column;gap:18px;
+}
+
+
+.page-header h1{margin:0;font-size:28px}
+.page-header .lead{color:var(--muted);margin-top:6px}
+
+
+.content{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(11,18,32,0.06)}
+.content h2{margin-top:18px;margin-bottom:6px}
+.content p,.content li{color:#26303a;line-height:1.6}
+.content ul{padding-left:20px}
+
+
+.doc-footer{margin-top:26px;padding-top:12px;border-top:1px solid #eef2f6;color:var(--muted)}
+
+
+/* Responsive */
+@media (max-width:900px){
+.tac-sidebar{display:none}
+.tac-shell{flex-direction:column}
+.tac-main{padding:20px}
+}
+/* ...existing code... */
+
+/* Terms & Conditions responsive styles */
+.tac-shell {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 28px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  color: #1f2937;
+  font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+/* Header / lead */
+.tac-shell h1 {
+  font-size: 2rem;
+  margin: 0 0 12px;
+  color: #0a3d62;
+  font-weight: 700;
+}
+.tac-shell .lead {
+  margin: 0 0 18px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Content */
+.tac-shell .content { margin-top: 18px; }
+.tac-shell h2 {
+  font-size: 1.125rem;
+  margin: 18px 0 10px;
+  color: #13324a;
+  font-weight: 600;
+}
+.tac-shell p, .tac-shell ul {
+  font-size: 0.98rem;
+  margin: 0 0 12px;
+  color: #333;
+}
+
+/* Lists */
+.tac-shell ul { padding-left: 1.25rem; }
+.tac-shell li { margin: 6px 0; }
+
+/* Links */
+.tac-shell a {
+  color: var(--green, #7cc142);
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+/* Doc footer */
+.tac-shell .doc-footer {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(2,6,23,0.06);
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Make content easier to read on very wide screens */
+@media (min-width: 1200px) {
+  .tac-shell { max-width: 1100px; padding: 36px; }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .tac-shell {
+    margin: 20px;
+    padding: 22px;
+  }
+  .tac-shell h1 { font-size: 1.75rem; }
+  .tac-shell h2 { font-size: 1.05rem; }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .tac-shell {
+    margin: 12px;
+    padding: 16px;
+    border-radius: 6px;
+  }
+  .tac-shell h1 { font-size: 1.35rem; margin-bottom: 8px; }
+  .tac-shell .lead { font-size: 0.95rem; margin-bottom: 12px; }
+  .tac-shell h2 { font-size: 1rem; margin: 12px 0 8px; }
+  .tac-shell p, .tac-shell li { font-size: 0.95rem; }
+  .tac-shell ul { padding-left: 1rem; }
+  .tac-shell .doc-footer { font-size: 0.9rem; }
+}
+
+/* Accessibility: larger tap targets for links */
+.tac-shell a,
+.tac-shell li { touch-action: manipulation; }
+
+/* ...existing code... */

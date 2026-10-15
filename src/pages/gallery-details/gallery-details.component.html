@@ -1,0 +1,11 @@
+<main class="gallery-details-page">
+  <header class="gallery-details-intro">
+    <a routerLink="/gallery" class="gallery-back"><span aria-hidden="true">←</span> All collections</a>
+    <p class="page-kicker">FROM OUR PHOTO COLLECTION</p>
+    <h1>{{ category | titlecase }}</h1>
+    <p>Places and moments from around Kashmir.</p>
+  </header>
+  <section class="gallery-image-grid" [attr.aria-label]="category + ' photographs'">
+    <img *ngFor="let img of images; let index = index" [src]="img" [alt]="category + ' photograph ' + (index + 1)" loading="lazy" />
+  </section>
+</main>

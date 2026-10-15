@@ -1,0 +1,23 @@
+<main class="services-page">
+  <header class="services-intro">
+    <p class="page-kicker">HOW WE CAN HELP</p>
+    <h1>Good trips are made of good details.</h1>
+    <p>Practical local support, from the first route idea to the last day in the valley.</p>
+  </header>
+
+  <section class="services-grid" aria-label="Travel services">
+    <article class="service-card" *ngFor="let service of services">
+      <span class="service-icon"><i [class]="service.icon" aria-hidden="true"></i></span>
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.desc }}</p>
+    </article>
+  </section>
+
+  <section class="services-contact">
+    <div>
+      <p class="page-kicker">MADE A SHORTLIST?</p>
+      <h2>Let’s put the pieces together.</h2>
+    </div>
+    <a routerLink="/contact">Ask us about your trip <span aria-hidden="true">→</span></a>
+  </section>
+</main>

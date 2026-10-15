@@ -1,0 +1,19 @@
+<main class="gallery-page">
+  <header class="gallery-intro">
+    <p class="page-kicker">A LOOK AROUND THE VALLEY</p>
+    <h1>Small moments, lasting memories.</h1>
+    <p>Browse a few glimpses of the places, stays and craft that make a Kashmir journey special.</p>
+  </header>
+
+  <section class="gallery-category-grid" aria-label="Photo categories">
+    <a class="gallery-category" *ngFor="let cat of categories" [routerLink]="cat.route">
+      <img [src]="cat.img" [alt]="cat.name + ' in Kashmir'" loading="lazy" />
+      <span class="gallery-category-caption"><strong>{{ cat.name }}</strong><span>View collection →</span></span>
+    </a>
+  </section>
+
+  <section class="gallery-contact">
+    <p>Planning your own visit?</p>
+    <a href="https://wa.me/919797000873" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Talk to our team</a>
+  </section>
+</main>

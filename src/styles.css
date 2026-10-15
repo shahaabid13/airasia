@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #174c69;
+  --primary-deep: #123747;
+  --accent: #d52735;
+  --text: #203743;
+  --muted: #64757d;
+  --surface: #f5f7f6;
+  --line: #dce5e7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--surface);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+app-root {
+  display: block;
+}
+
+.navbar .nav-link.active {
+  font-weight: 700;
+  color: #173c50 !important;
+}
+
+.page-kicker {
+  margin: 0 0 12px;
+  color: #bf5260;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.legal-page { padding: 52px 24px 76px; background: #f5f7f6; color: #263e49; }
+.legal-container { width: min(100%, 1060px); margin: 0 auto; }
+.legal-header { max-width: 780px; margin: 0 auto 28px; text-align: center; }
+.legal-header h1 { margin: 0; color: #183747; font: 500 clamp(2.4rem, 4vw, 3.5rem)/1.12 'Playfair Display', Georgia, serif; }
+.legal-header .lead { max-width: 720px; margin: 14px auto 8px; color: #64757d; line-height: 1.7; }
+.legal-header .meta { color: #829096; font-size: .78rem; }
+.legal-toc { padding: 18px 0; border-top: 1px solid #dce5e7; border-bottom: 1px solid #dce5e7; }
+.legal-toc strong { color: #183747; font-size: .82rem; }
+.legal-toc ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+.legal-toc .toc-link, .legal-toc a { display: inline-flex; padding: 7px 11px; border: 1px solid #dce5e7; border-radius: 999px; background: #fff; color: #34535f; font-size: .76rem; text-decoration: none; }
+.legal-toc .toc-link:hover, .legal-toc a:hover { border-color: #174c69; background: #174c69; color: #fff; }
+.legal-content { max-width: 820px; margin: 32px auto 0; }
+.legal-content section { padding: 24px 0; border-bottom: 1px solid #dce5e7; scroll-margin-top: 20px; }
+.legal-content h2 { margin: 0 0 11px; color: #183747; font-size: 1.12rem; font-weight: 700; }
+.legal-content p, .legal-content li, .legal-content dd { color: #536a74; font-size: .92rem; line-height: 1.75; }
+.legal-content p:last-child { margin-bottom: 0; }
+.legal-content ul { padding-left: 1.2rem; }
+.legal-content li { margin: 5px 0; }
+.legal-content a { color: #b82b3a; text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.legal-content dl { margin: 0; }
+.legal-content dt { margin-top: 17px; color: #183747; font-size: .94rem; }
+.legal-content dd { margin: 6px 0 0; }
+.legal-content .doc-footer { padding-top: 22px; color: #829096; font-size: .8rem; }
+@media (max-width: 600px) { .legal-page { padding: 38px 18px 54px; } .legal-header { text-align: left; } .legal-header .lead { margin-left: 0; } .legal-content { margin-top: 24px; } .legal-content section { padding: 20px 0; } }
+
+.footer .accordion-button::after {
+  filter: invert(1);
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

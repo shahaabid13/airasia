@@ -1,0 +1,18 @@
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #82ccdd;
+  color: #0a3d62;
+}
+.hero button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: #0a3d62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.carousel-item img {
+  height: 70vh;
+  object-fit: cover;
+}

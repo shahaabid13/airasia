@@ -1,0 +1,60 @@
+<section class="home-hero" aria-labelledby="home-title">
+  <img class="home-hero-image" src="images/houseboat-2.jpg" alt="Houseboats and a shikara on Dal Lake in Srinagar" fetchpriority="high">
+  <div class="home-hero-shade"></div>
+  <div class="home-hero-content">
+    <p class="home-hero-kicker">SRINAGAR · KASHMIR</p>
+    <h1 id="home-title">Find your own<br>Kashmir.</h1>
+    <p class="home-hero-copy">From Srinagar’s lakefront to the mountain valleys, start with a local conversation and shape a trip around your dates.</p>
+    <div class="home-hero-actions">
+      <a routerLink="/contact" class="hero-button hero-button--red">Plan my trip <span aria-hidden="true">→</span></a>
+      <a href="https://wa.me/919797000873?text=Hello%2C%20I%20would%20like%20to%20plan%20a%20Kashmir%20trip." target="_blank" rel="noreferrer" class="hero-button hero-button--light">WhatsApp us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Info Section -->
+
+<section class="home-destinations" aria-labelledby="destinations-title">
+  <header class="home-section-intro">
+    <p class="page-kicker">A FEW PLACES TO BEGIN</p>
+    <h2 id="destinations-title">Let the valley set the pace.</h2>
+    <p>From lakeside mornings to open mountain meadows, find a corner of Kashmir that feels like yours.</p>
+  </header>
+  <div class="destination-grid">
+    <a class="destination-tile destination-tile--feature" routerLink="/packages">
+      <img src="images/pahalgam.jpg" alt="Pine-covered mountains and river scenery in Pahalgam" loading="lazy" />
+      <span><strong>Pahalgam</strong><small>Riverside walks and pine valleys</small></span>
+    </a>
+    <a class="destination-tile" routerLink="/packages">
+      <img src="images/gulmarg-snow.jpg" alt="Snow-covered slopes in Gulmarg" loading="lazy" />
+      <span><strong>Gulmarg</strong><small>High meadows and mountain air</small></span>
+    </a>
+    <a class="destination-tile" routerLink="/packages">
+      <img src="images/gurez-2.jpg" alt="Mountain valley in Gurez" loading="lazy" />
+      <span><strong>Gurez Valley</strong><small>Wide horizons and quiet roads</small></span>
+    </a>
+    <a class="destination-tile" routerLink="/packages">
+      <img src="images/doodhpathri.jpg" alt="Green meadow in Doodhpathri" loading="lazy" />
+      <span><strong>Doodhpathri</strong><small>Meadows, streams and open sky</small></span>
+    </a>
+  </div>
+</section>
+
+<section class="home-testimonials" aria-labelledby="guest-notes-title">
+  <header class="home-section-intro">
+    <p class="page-kicker">GUEST NOTES</p>
+    <h2 id="guest-notes-title">Good trips stay with you.</h2>
+  </header>
+  <div class="testimonial-list">
+    <article class="testimonial-entry" *ngFor="let testimonial of testimonials; let i = index" [class.testimonial-entry--active]="i === activeIndex">
+      <div class="testimonial-person">
+        <img [src]="testimonial.imageSrc" [alt]="testimonial.name" loading="lazy" />
+        <div><h3>{{ testimonial.name }}</h3><p>{{ testimonial.location }}</p></div>
+      </div>
+      <p class="testimonial-quote">“{{ testimonial.quote }}”</p>
+    </article>
+  </div>
+  <div class="testimonial-controls" aria-label="Choose a guest note">
+    <button *ngFor="let item of testimonials; let i = index" type="button" [attr.aria-label]="'Show guest note ' + (i + 1)" [attr.aria-pressed]="i === activeIndex" [class.is-active]="i === activeIndex" (click)="setActiveTestimonial(i)"></button>
+  </div>
+</section>

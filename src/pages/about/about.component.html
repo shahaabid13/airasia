@@ -1,0 +1,49 @@
+<main class="about-page">
+  <section class="about-story">
+    <div class="about-photo">
+      <img src="images/nishat-bagh-2.jpg" alt="Terraced gardens overlooking Dal Lake in Srinagar" />
+      <p>Made for the way you want to travel</p>
+    </div>
+    <div class="about-copy">
+      <p class="page-kicker">ABOUT AIR ASIA</p>
+      <h1>Local knowledge.<br><span>Room to explore.</span></h1>
+      <p>We are a Srinagar-based travel team helping visitors experience Kashmir through its landscapes, culture and warm hospitality.</p>
+      <p>From the first conversation to the final drive, we help coordinate stays, transport and local experiences around your dates and pace.</p>
+      <ul class="about-features">
+        <li><i class="fas fa-check" aria-hidden="true"></i> Local trip planning</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Stays and houseboats</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Private transport</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Help while you travel</li>
+      </ul>
+      <a class="about-contact-link" routerLink="/contact">Talk through your trip <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="about-reviews">
+    <div class="about-review-count">
+      <p class="page-kicker">TRAVEL WITH A LOCAL TEAM</p>
+      <h2>Thoughtful details make a difference.</h2>
+      <p class="about-count">{{ count }}<span>+</span></p>
+      <p>travellers welcomed</p>
+    </div>
+    <div class="about-review-panel">
+      <p class="page-kicker">A NOTE FROM A GUEST</p>
+      <div class="review-profile">
+        <span class="review-avatar" aria-hidden="true">{{ reviews[currentReview].name.charAt(0) }}</span>
+        <div>
+          <h3>{{ reviews[currentReview].name }}</h3>
+          <p>{{ reviews[currentReview].date }}</p>
+        </div>
+      </div>
+      <div class="review-stars" [attr.aria-label]="reviews[currentReview].rating + ' out of 5 stars'">
+        <span *ngFor="let star of getStars(reviews[currentReview].rating)" aria-hidden="true">★</span>
+      </div>
+      <blockquote>{{ reviews[currentReview].text }}</blockquote>
+      <div class="review-controls">
+        <button type="button" aria-label="Previous review" (click)="prevReview()"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+        <button type="button" aria-label="Next review" (click)="nextReview()"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </section>
+</main>
+

@@ -1,0 +1,68 @@
+.tac-shell {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 28px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  color: #1f2937;
+  font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+.tac-shell h1 {
+  font-size: 2rem;
+  margin: 0 0 12px;
+  color: #0a3d62;
+  font-weight: 700;
+}
+.tac-shell .lead {
+  margin: 0 0 18px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.tac-toc { margin: 12px 0 18px; }
+.tac-toc ul { padding-left: 1rem; }
+.tac-toc .toc-link { display: inline-block; padding: 6px 8px; border-radius: 6px; color: #0a3d62; text-decoration: none; }
+.tac-toc .toc-link:hover { background: #2563eb; color: #fff; }
+
+/* Content */
+.content { margin-top: 18px; }
+.content h2 {
+  font-size: 1.125rem;
+  margin: 18px 0 10px;
+  color: #13324a;
+  font-weight: 600;
+}
+.content dl { margin: 0 0 12px; }
+.content dt { margin-top: 10px; font-weight: 600; color: #0a3d62; }
+.content dd { margin: 6px 0 12px 0; color: #374151; }
+
+/* Footer */
+.doc-footer {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(2,6,23,0.06);
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .tac-shell { margin: 20px; padding: 22px; }
+  .tac-shell h1 { font-size: 1.75rem; }
+  .content h2 { font-size: 1.05rem; }
+}
+
+@media (max-width: 576px) {
+  .tac-shell { margin: 12px; padding: 16px; border-radius: 6px; }
+  .tac-shell h1 { font-size: 1.35rem; }
+  .tac-shell .lead { font-size: 0.95rem; }
+  .content h2 { font-size: 1rem; margin: 12px 0 8px; }
+  .content dt { font-size: 0.98rem; }
+  .content dd { font-size: 0.95rem; }
+}
+
+html { scroll-behavior: smooth; }

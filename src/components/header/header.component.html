@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/" aria-label="Air Asia Tour And Travels home">
+      <img src="images/Air Asia Tour Logo Design.png" alt="Air Asia Tour And Travels logo" class="brand-logo" />
+      <div class="brand-copy">
+        <span class="brand-title">Air Asia Tour And Travels</span>
+        <small class="brand-tagline">Your Kashmir journey, thoughtfully planned</small>
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeNavbar()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" class="nav-link" routerLinkActive="active" (click)="closeNavbar()">About</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/services" class="nav-link" routerLinkActive="active" (click)="closeNavbar()">Services</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/packages" class="nav-link" routerLinkActive="active" (click)="closeNavbar()">Packages</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/gallery" class="nav-link" routerLinkActive="active" (click)="closeNavbar()">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contact" class="nav-link" routerLinkActive="active" (click)="closeNavbar()">Contact</a>
+        </li>
+      </ul>
+      <div class="header-actions">
+        <a class="button button--outline" href="tel:+919797000873">Call us</a>
+        <a class="button button--red" href="https://wa.me/919797000873" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</nav>

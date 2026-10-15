@@ -1,0 +1,35 @@
+<main class="packages-page">
+  <section class="packages-intro">
+    <p class="packages-kicker">KASHMIR, AT YOUR PACE</p>
+    <h1>Find a trip that feels like yours.</h1>
+    <p>These itineraries are starting points. Tell us your dates and we’ll shape the details around your plans.</p>
+  </section>
+
+  <section class="package-grid" aria-label="Kashmir trip ideas">
+    <article class="package-card" *ngFor="let pkg of packages">
+      <div class="package-image">
+        <img [src]="pkg.img" [alt]="pkg.name" />
+      </div>
+      <div class="package-content">
+        <p class="package-meta"><span>{{ pkg.days }}</span><span>{{ pkg.persons }}</span></p>
+        <h2>{{ pkg.name }}</h2>
+        <p class="package-description">{{ pkg.desc }}</p>
+        <button class="package-inquire" type="button" (click)="whatsappNow()">
+          Ask about this trip <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <section class="packages-contact">
+    <div>
+      <p class="packages-kicker">LET’S PLAN IT TOGETHER</p>
+      <h2>Have dates in mind?</h2>
+      <p>Get in touch to discuss routes, stays and current arrangements.</p>
+    </div>
+    <div class="packages-contact-actions">
+      <a href="tel:+919797000873"><i class="fa fa-phone" aria-hidden="true"></i> Call us</a>
+      <button type="button" (click)="whatsappNow()"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</button>
+    </div>
+  </section>
+</main>
